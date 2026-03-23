@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Haven Bookstore | About & Contact</title>
+  <style>
+    :root {
+      --bg:#F5F0E6; --surface:#FFFDF8; --primary:#7A5C3E; --accent:#4B6E58; --text:#131C26; --logo:#5C2E5C; --border:#DDD2C4; --shadow:0 10px 24px rgba(19,28,38,.08);
+    }
+    *{ box-sizing:border-box; }
+    body{ margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--bg); color:var(--text); }
+    h1,h2,h3,.brand{ font-family:Georgia, "Times New Roman", serif; }
+    header{ background:rgba(122,92,62,.96); color:#fff; box-shadow:0 4px 14px rgba(0,0,0,.08); }
+    .nav-wrap{ max-width:1120px; margin:auto; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+    .brand{ color:#fff; text-decoration:none; font-size:1.4rem; }
+    nav{ display:flex; gap:10px; flex-wrap:wrap; }
+    nav a{ color:#fff; text-decoration:none; font-weight:bold; padding:8px 14px; border-radius:999px; }
+    nav a:hover, nav a.active{ background:rgba(255,255,255,.18); }
+    .container{ max-width:1120px; margin:auto; padding:46px 20px; }
+    .columns{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .box{ background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:24px; box-shadow:var(--shadow); }
+    .details p{ margin:.5rem 0; }
+    form label{ display:block; margin-top:12px; font-weight:bold; }
+    input, textarea{ width:100%; padding:12px; margin-top:6px; border:1px solid #b8ae9f; border-radius:10px; font:inherit; background:#fff; }
+    button{ margin-top:14px; background:var(--logo); color:#fff; border:none; padding:12px 18px; border-radius:10px; font-weight:bold; cursor:pointer; }
+    footer{ background:var(--text); color:#F5F0E6; text-align:center; padding:22px; margin-top:32px; }
+    footer .subscribeBtn{ margin-top:12px; background:var(--accent); color:#fff; border:none; padding:10px 16px; border-radius:10px; font-weight:bold; cursor:pointer; }
+    @media (max-width:800px){ .columns{ grid-template-columns:1fr; } .nav-wrap{ justify-content:center; } nav{ justify-content:center; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Book Haven Bookstore</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Featured Books</a>
+        <a class="active" href="about.html">About &amp; Contact</a>
+        <a href="events.html">Events</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>About Book Haven</h1>
+    <div class="columns">
+      <section class="box details">
+        <h2>Our Mission</h2>
+        <p>Book Haven Bookstore creates a cozy, welcoming space where readers of all ages can discover stories, share recommendations, and connect with their local community.</p>
+        <h3>Visit the Store</h3>
+        <p>214 Maple Street<br>Rochester, NY 14607</p>
+        <p><strong>Email:</strong> hello@bookhavenbookstore.com</p>
+        <p><strong>Phone:</strong> (555) 214-9081</p>
+        <p><strong>What to Expect:</strong> Friendly staff recommendations, comfortable browsing, family reading events, and a thoughtfully curated collection.</p>
+      </section>
+
+      <section class="box">
+        <h2>Contact Form</h2>
+        <form id="contactForm">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="6" placeholder="Tell us how we can help" required></textarea>
+
+          <button id="submitBtn" type="submit">Send Message</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Book Haven Bookstore | Thank you for supporting local readers and local booksellers.</p>
+    <button class="subscribeBtn" type="button">Subscribe</button>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Haven Bookstore | Home</title>
+  <style>
+    :root {
+      --bg: #F5F0E6;
+      --surface: #FFFDF8;
+      --primary: #7A5C3E;
+      --accent: #4B6E58;
+      --text: #131C26;
+      --logo: #5C2E5C;
+      --border: #DDD2C4;
+      --shadow: 0 10px 24px rgba(19, 28, 38, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    h1, h2, h3, .brand {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    header {
+      background: rgba(122, 92, 62, 0.96);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 4px 14px rgba(0,0,0,.08);
+    }
+    .nav-wrap {
+      max-width: 1120px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.4rem;
+      letter-spacing: .3px;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 999px;
+    }
+    nav a:hover, nav a.active {
+      background: rgba(255,255,255,.18);
+    }
+    .hero {
+      min-height: 72vh;
+      padding: 80px 20px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(19,28,38,.40), rgba(19,28,38,.46)),
+        linear-gradient(rgba(122,92,62,.76), rgba(75,110,88,.74)),
+        url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1400&q=80') center/cover;
+    }
+    .hero-card {
+      max-width: 760px;
+      background: rgba(0,0,0,.18);
+      padding: 34px;
+      border-radius: 22px;
+      backdrop-filter: blur(2px);
+    }
+    .hero h1 { font-size: clamp(2.2rem, 5vw, 4rem); margin: 0 0 10px; }
+    .hero p { font-size: 1.08rem; margin: 0 auto 18px; max-width: 640px; }
+    .button-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent); color: white; }
+    .btn-secondary { background: rgba(255,255,255,.18); color: white; border: 1px solid rgba(255,255,255,.45); }
+    .container { max-width: 1120px; margin: auto; padding: 50px 20px; }
+    .intro { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start; }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 22px; }
+    .feature-grid article {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      border-top: 4px solid var(--accent);
+      box-shadow: var(--shadow);
+    }
+    .feature-grid h3 { margin-top: 0; }
+    .hours { list-style: none; padding: 0; margin: 0; }
+    .hours li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .quote {
+      margin-top: 26px;
+      padding: 20px 24px;
+      border-left: 5px solid var(--logo);
+      background: #fff;
+      border-radius: 0 14px 14px 0;
+      box-shadow: var(--shadow);
+      font-style: italic;
+    }
+    footer {
+      background: var(--text);
+      color: #F5F0E6;
+      text-align: center;
+      padding: 22px;
+      margin-top: 30px;
+    }
+    footer .subscribeBtn {
+      margin-top: 12px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    @media (max-width: 760px) {
+      .intro { grid-template-columns: 1fr; }
+      .nav-wrap { justify-content: center; }
+      nav { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Book Haven Bookstore</a>
+      <nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="gallery.html">Featured Books</a>
+        <a href="about.html">About &amp; Contact</a>
+        <a href="events.html">Events</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <p>Cozy shelves. Thoughtful recommendations. A welcoming reading community.</p>
+      <h1>Find your next favorite book at Book Haven.</h1>
+      <p>Explore bestselling fiction, beloved children’s stories, and community-centered events in a warm online space inspired by the feeling of a neighborhood bookstore.</p>
+      <div class="button-row">
+        <a class="btn btn-primary" href="gallery.html">Browse Featured Books</a>
+        <a class="btn btn-secondary" href="events.html">See Upcoming Events</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="intro">
+      <div class="panel">
+        <h2>A bookstore experience designed for comfort</h2>
+        <p>Book Haven Bookstore uses a warm beige background, rich brown navigation, natural green accents, and dark text to create a calm, readable design. Serif headings give the site a literary personality, while clean sans-serif body text keeps every page easy to scan on desktop and mobile devices.</p>
+        <p>Visitors can move through the site using a consistent navigation menu, discover featured book categories, learn about the store, and stay informed about community events.</p>
+        <div class="quote">“A good bookstore is not just a shop — it’s a place where readers feel at home.”</div>
+      </div>
+
+      <aside class="panel">
+        <h2>Store Hours</h2>
+        <ul class="hours">
+          <li><strong>Monday–Thursday:</strong> 10:00 AM – 7:00 PM</li>
+          <li><strong>Friday:</strong> 10:00 AM – 8:00 PM</li>
+          <li><strong>Saturday:</strong> 9:00 AM – 8:00 PM</li>
+          <li><strong>Sunday:</strong> 11:00 AM – 5:00 PM</li>
+        </ul>
+        <p><strong>Location:</strong> 214 Maple Street, Rochester, NY 14607</p>
+        <a class="btn btn-primary" href="about.html">Contact the Store</a>
+      </aside>
+    </section>
+
+    <section>
+      <h2>Why readers love Book Haven</h2>
+      <div class="feature-grid">
+        <article>
+          <h3>Curated Selections</h3>
+          <p>Explore handpicked adult fiction, nonfiction, and children’s titles chosen to make browsing easy and enjoyable.</p>
+        </article>
+        <article>
+          <h3>Welcoming Atmosphere</h3>
+          <p>The visual style reflects the cozy feel of warm shelves, soft lighting, and comfortable corners for reading.</p>
+        </article>
+        <article>
+          <h3>Community Events</h3>
+          <p>Join book clubs, author talks, and family story times that bring local readers together throughout the year.</p>
+        </article>
+        <article>
+          <h3>Accessible Design</h3>
+          <p>High-contrast text, clean spacing, and consistent structure help visitors navigate the site with confidence.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Book Haven Bookstore | Designed with warm bookstore-inspired colors and readable typography.</p>
+    <button class="subscribeBtn" type="button">Subscribe</button>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
